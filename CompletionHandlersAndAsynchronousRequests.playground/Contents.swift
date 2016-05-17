@@ -11,7 +11,9 @@ class ViewController : UIViewController {
     var imageDisplay = UIImageView(image: nil)
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
-        
+        var myImage = UIImage(named: " ")
+        var scaledImage = UIImage(named: " ")
+
         // Print the provided data
         print("")
         print("====== the data provided to parseMyJSON is as follows ======")
@@ -50,8 +52,17 @@ class ViewController : UIViewController {
                         print(substringURL)
                         if let url = NSURL(string: substringURL) {
                             if let data = NSData(contentsOfURL: url) {
-                                imageDisplay.image = UIImage(data: data)
-                                print("Image updated")
+                                myImage = UIImage(data: data)
+                                let size = CGSizeApplyAffineTransform(myImage!.size, CGAffineTransformMakeScale(0.35, 0.5))
+                                let hasAlpha = false
+                                let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+                                
+                                UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+                                myImage!.drawInRect(CGRect(origin: CGPointZero, size: size))
+                                
+                                scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+                                UIGraphicsEndImageContext()
+
                             }        
                         }
                     }
@@ -75,6 +86,8 @@ class ViewController : UIViewController {
             // Now we can update the UI
             // (must be done asynchronously)
             dispatch_async(dispatch_get_main_queue()) {
+
+                self.imageDisplay.image = scaledImage
                 self.jsonResult.text = "parsed JSON should go here"
             }
             
@@ -137,7 +150,7 @@ class ViewController : UIViewController {
         address += String(sol)
         address += "&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt"
         //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=37&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt
-        
+        sol++
         // Try to make a URL request object
         if let url = NSURL(string: address) {
             
@@ -196,6 +209,8 @@ class ViewController : UIViewController {
         /*
          * Add a button
          */
+        imageDisplay.frame = CGRect(x: 10, y: 150, width: 100, height: 100)
+        imageDisplay.contentMode = .ScaleAspectFit
         imageDisplay.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(imageDisplay)
