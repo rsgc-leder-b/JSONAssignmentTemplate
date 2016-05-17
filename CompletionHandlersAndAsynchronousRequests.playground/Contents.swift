@@ -7,6 +7,7 @@ class ViewController : UIViewController {
     
     // Views that need to be accessible to all methods
     let jsonResult = UILabel()
+    var sol = 37 // to 1341
     
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
@@ -23,16 +24,43 @@ class ViewController : UIViewController {
             // Source JSON is here:
             // http://www.learnswiftonline.com/Samples/subway.json
             //
-            let json = try NSJSONSerialization.JSONObjectWithData(theData, options: NSJSONReadingOptions.AllowFragments) as! AnyObject
+            let jsonData = try NSJSONSerialization.JSONObjectWithData(theData, options: NSJSONReadingOptions.AllowFragments)
             
             // Print retrieved JSON
             print("")
             print("====== the retrieved JSON is as follows ======")
-            print(json)
+            print(jsonData)
             
             // Now we can parse this...
             print("")
             print("Now, add your parsing code here...")
+            
+            
+            
+            if let names = jsonData as? [String : AnyObject] {
+                print("Data Retrieved: \n \(names)")
+                
+                if let stations = names["photos"] as? [AnyObject] {
+                    for station in stations {
+                        print(station)
+                        print(station["stationName"])
+                    }
+                } else {
+                    print("Error")
+                }
+                
+                //            for name in names {
+                //                print(name)
+                //                if let asDict = name as? [String : String] {
+                //                    asDict
+                //                    for (a, b) in asDict {
+                //                        print(a + ":" + b)
+                //                    }
+                //                }
+                //            }
+            }
+            
+            
             
             // Now we can update the UI
             // (must be done asynchronously)
@@ -95,7 +123,10 @@ class ViewController : UIViewController {
         }
         
         // Define a URL to retrieve a JSON file from
-        let address : String = "http://www.learnswiftonline.com/Samples/subway.json"
+        var address : String = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol="
+        address += String(sol)
+        address += "&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt"
+        //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=37&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt
         
         // Try to make a URL request object
         if let url = NSURL(string: address) {
