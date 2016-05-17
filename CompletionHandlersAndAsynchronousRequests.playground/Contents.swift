@@ -8,7 +8,7 @@ class ViewController : UIViewController {
     // Views that need to be accessible to all methods
     let jsonResult = UILabel()
     var sol = 37 // to 1341
-    
+    var imageDisplay = UIImageView(image: nil)
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
         
@@ -43,7 +43,17 @@ class ViewController : UIViewController {
                 if let stations = names["photos"] as? [AnyObject] {
                     for station in stations {
                         print(station)
-                        print(station["stationName"])
+                        var urlValue = "ERROR"
+                        urlValue = String(station["img_src"])
+                        let range = urlValue.startIndex.advancedBy(9)..<urlValue.endIndex.advancedBy(-1)
+                        let substringURL = urlValue[range]
+                        print(substringURL)
+                        if let url = NSURL(string: substringURL) {
+                            if let data = NSData(contentsOfURL: url) {
+                                imageDisplay.image = UIImage(data: data)
+                                print("Image updated")
+                            }        
+                        }
                     }
                 } else {
                     print("Error")
@@ -186,6 +196,10 @@ class ViewController : UIViewController {
         /*
          * Add a button
          */
+        imageDisplay.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(imageDisplay)
+        
         let getData = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
         
         // Make the button, when touched, run the calculate method
@@ -213,11 +227,12 @@ class ViewController : UIViewController {
         // Create a dictionary of views that will be used in the layout constraints defined below
         let viewsDictionary : [String : AnyObject] = [
             "title": jsonResult,
-            "getData": getData]
+            "getData": getData,
+            "image": imageDisplay]
         
         // Define the vertical constraints
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-50-[getData]-[title]",
+            "V:|-50-[getData]-[title]-[image]",
             options: [],
             metrics: nil,
             views: viewsDictionary)
