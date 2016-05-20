@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mars Curiosity Browser/ViewController.swift"
+            timestampString = "485469084.154357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mars_Curiosity_Browser.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Mars_Curiosity_Browser.ViewController"
+                  moduleName = "Mars Curiosity Browser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brendan/Documents/JSONAssignmentTemplate/Mars%20Curiosity%20Browser/Mars%20Curiosity%20Browser/ViewController.swift"
+                  timestampString = "485470463.326749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mars_Curiosity_Browser.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Mars_Curiosity_Browser.ViewController&gt;"
+                  moduleName = "Mars Curiosity Browser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brendan/Documents/JSONAssignmentTemplate/Mars%20Curiosity%20Browser/Mars%20Curiosity%20Browser/ViewController.swift"
+                  timestampString = "485470463.327146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     // Views that need to be accessible to all methods
-    let jsonResult = UILabel()
     var sol = 37 // to 1341
-    var imageDisplay = UIImageView(image: nil)
-    let textSol = UITextField(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
     var isUpdate : Bool = true
+    @IBOutlet weak var imageDisplay: UIImageView!
+    @IBOutlet weak var getData: UIButton!
+    @IBOutlet weak var jsonResult: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var textSol: UITextField!
+
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
         var myImage = UIImage(named: " ")
@@ -97,7 +100,7 @@ class ViewController: UIViewController {
             // (must be done asynchronously)
             dispatch_async(dispatch_get_main_queue()) {
                 
-                self.imageDisplay.image = scaledImage
+                self.imageDisplay.image = myImage
                 self.jsonResult.text = "Current Sol: \(self.sol-36)"
                 self.isUpdate = true
             }
@@ -250,10 +253,10 @@ class ViewController: UIViewController {
         jsonResult.textAlignment = NSTextAlignment.Center
         
         // Required to autolayout this label
-        jsonResult.translatesAutoresizingMaskIntoConstraints = false
+        //jsonResult.translatesAutoresizingMaskIntoConstraints = false
         
         // Add the label to the superview
-        view.addSubview(jsonResult)
+        //view.addSubview(jsonResult)
         
         /*
          * Add a button
@@ -264,23 +267,23 @@ class ViewController: UIViewController {
         
         view.addSubview(imageDisplay)
         
-        let minusButton = UIButton(frame: CGRect(x:150, y:50, width: 100, height: 30))
+        
         minusButton.addTarget(self, action: #selector(ViewController.subSol), forControlEvents: UIControlEvents.TouchUpInside)
         minusButton.setTitle("Remove Sol", forState: UIControlState.Normal)
-        minusButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(minusButton)
+        //minusButton.translatesAutoresizingMaskIntoConstraints = false
+        //view.addSubview(minusButton)
         
         textSol.borderStyle = UITextBorderStyle.RoundedRect
         textSol.font = UIFont.systemFontOfSize(15)
         textSol.placeholder = "                "
         textSol.backgroundColor = UIColor.whiteColor()
         textSol.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
-        textSol.translatesAutoresizingMaskIntoConstraints = false
+        //textSol.translatesAutoresizingMaskIntoConstraints = false
         textSol.addTarget(self, action: #selector(ViewController.textConvert), forControlEvents: .EditingChanged)
-        view.addSubview(textSol)
+        //view.addSubview(textSol)
         
         
-        let getData = UIButton(frame: CGRect(x: 0, y: 50, width: 150, height: 30))
+        
         
         // Make the button, when touched, run the calculate method
         getData.addTarget(self, action: #selector(ViewController.addSol), forControlEvents: UIControlEvents.TouchUpInside)
@@ -289,10 +292,10 @@ class ViewController: UIViewController {
         getData.setTitle("Add Sol", forState: UIControlState.Normal)
         
         // Required to auto layout this button
-        getData.translatesAutoresizingMaskIntoConstraints = false
+        //getData.translatesAutoresizingMaskIntoConstraints = false
         
         // Add the button into the super view
-        view.addSubview(getData)
+        //view.addSubview(getData)
         
         /*
          * Layout all the interface elements
@@ -306,15 +309,15 @@ class ViewController: UIViewController {
         
         // Create a dictionary of views that will be used in the layout constraints defined below
         let viewsDictionary : [String : AnyObject] = [
-            "title": jsonResult,
-            "getData": getData,
-            "minBut": minusButton,
+            //"title": jsonResult,
+            //"getData": getData,
+            //"minBut": minusButton,
             //"textIn": textSol,
             "image": imageDisplay]
         
         // Define the vertical constraints
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-25-[getData]-[minBut]-[title]-[image]",
+            "V:|-25-[image]",
             options: [],
             metrics: nil,
             views: viewsDictionary)
@@ -324,6 +327,7 @@ class ViewController: UIViewController {
         
         // Activate all defined constraints
         NSLayoutConstraint.activateConstraints(allConstraints)
+ 
         getMyJSON()
     }
     
