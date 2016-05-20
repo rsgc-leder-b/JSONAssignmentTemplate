@@ -9,15 +9,19 @@ class ViewController : UIViewController {
     let jsonResult = UILabel()
     var sol = 37 // to 1341
     var imageDisplay = UIImageView(image: nil)
+    let textSol = UITextField(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    var isUpdate : Bool = true
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
         var myImage = UIImage(named: " ")
         var scaledImage = UIImage(named: " ")
 
         // Print the provided data
+        /*
         print("")
         print("====== the data provided to parseMyJSON is as follows ======")
         print(theData)
+        */
         
         // De-serializing JSON can throw errors, so should be inside a do-catch structure
         do {
@@ -29,6 +33,7 @@ class ViewController : UIViewController {
             let jsonData = try NSJSONSerialization.JSONObjectWithData(theData, options: NSJSONReadingOptions.AllowFragments)
             
             // Print retrieved JSON
+            /*
             print("")
             print("====== the retrieved JSON is as follows ======")
             print(jsonData)
@@ -36,24 +41,24 @@ class ViewController : UIViewController {
             // Now we can parse this...
             print("")
             print("Now, add your parsing code here...")
-            
+            */
             
             
             if let names = jsonData as? [String : AnyObject] {
-                print("Data Retrieved: \n \(names)")
+              //  print("Data Retrieved: \n \(names)")
                 
                 if let stations = names["photos"] as? [AnyObject] {
                     for station in stations {
-                        print(station)
+                //        print(station)
                         var urlValue = "ERROR"
                         urlValue = String(station["img_src"])
                         let range = urlValue.startIndex.advancedBy(9)..<urlValue.endIndex.advancedBy(-1)
                         let substringURL = urlValue[range]
-                        print(substringURL)
+                  //      print(substringURL)
                         if let url = NSURL(string: substringURL) {
                             if let data = NSData(contentsOfURL: url) {
                                 myImage = UIImage(data: data)
-                                let size = CGSizeApplyAffineTransform(myImage!.size, CGAffineTransformMakeScale(0.35, 0.5))
+                                let size = CGSizeApplyAffineTransform(myImage!.size, CGAffineTransformMakeScale(0.37, 0.5))
                                 let hasAlpha = false
                                 let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
                                 
@@ -88,7 +93,8 @@ class ViewController : UIViewController {
             dispatch_async(dispatch_get_main_queue()) {
 
                 self.imageDisplay.image = scaledImage
-                self.jsonResult.text = "parsed JSON should go here"
+                self.jsonResult.text = "Current Sol: \(self.sol-36)"
+                self.isUpdate = true
             }
             
         } catch let error as NSError {
@@ -121,7 +127,8 @@ class ViewController : UIViewController {
                 // If the request was successful, parse the given data
                 if r.statusCode == 200 {
         
-                    // Show debug information (if a request was completed successfully)            
+                    // Show debug information (if a request was completed successfully)  
+                    /*
                     print("")
                     print("====== data from the request follows ======")
                     print(data)
@@ -131,7 +138,7 @@ class ViewController : UIViewController {
                     print("")
                     print("====== errors from the request follows ======")
                     print(error)
-            
+            */
                     if let d = data {
                         
                         // Parse the retrieved data
@@ -150,12 +157,11 @@ class ViewController : UIViewController {
         address += String(sol)
         address += "&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt"
         //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=37&camera=fhaz&page=1&api_key=geXGSU2AeU5dzwzEK9lsbWqNab0mNIQVWUlMf5zt
-        sol++
-        // Try to make a URL request object
+
         if let url = NSURL(string: address) {
             
             // We have an valid URL to work with
-            print(url)
+            //print(url)
             
             // Now we create a URL request object
             let urlRequest = NSURLRequest(URL: url)
@@ -177,6 +183,44 @@ class ViewController : UIViewController {
             
         }
         
+    }
+    
+    func addSol() {
+        if (isUpdate) {
+            isUpdate = false
+            if (sol < 1341) {
+                sol++
+                getMyJSON()
+            } else {
+                self.jsonResult.text = "Sol cannot go above 1305"
+            }
+        } else {
+            self.jsonResult.text = "Wait for picture update"
+        }
+    }
+    
+    func textConvert() {
+        if self.textSol.text?.isEmpty == false {
+            let solVal : Int = Int(self.textSol.text!)! + 36
+            if solVal > 36 && solVal < 1342 {
+                sol = solVal
+                getMyJSON()
+            }
+        }
+    }
+    
+    func subSol() {
+        if (isUpdate) {
+            isUpdate = false
+            if (sol > 37) {
+                sol--
+                getMyJSON()
+            } else {
+                self.jsonResult.text = "Sol cannot go below 1"
+            }
+        } else {
+            self.jsonResult.text = "Wait for picture update"
+        }
     }
     
     // This is the method that will run as soon as the view controller is created
@@ -215,13 +259,29 @@ class ViewController : UIViewController {
         
         view.addSubview(imageDisplay)
         
-        let getData = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
+        let minusButton = UIButton(frame: CGRect(x:150, y:50, width: 100, height: 30))
+        minusButton.addTarget(self, action: #selector(ViewController.subSol), forControlEvents: UIControlEvents.TouchUpInside)
+        minusButton.setTitle("Remove Sol", forState: UIControlState.Normal)
+        minusButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(minusButton)
+        
+        textSol.borderStyle = UITextBorderStyle.RoundedRect
+        textSol.font = UIFont.systemFontOfSize(15)
+        textSol.placeholder = "                "
+        textSol.backgroundColor = UIColor.whiteColor()
+        textSol.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
+        textSol.translatesAutoresizingMaskIntoConstraints = false
+        textSol.addTarget(self, action: #selector(ViewController.textConvert), forControlEvents: .EditingChanged)
+        view.addSubview(textSol)
+
+        
+        let getData = UIButton(frame: CGRect(x: 0, y: 50, width: 150, height: 30))
         
         // Make the button, when touched, run the calculate method
-        getData.addTarget(self, action: #selector(ViewController.getMyJSON), forControlEvents: UIControlEvents.TouchUpInside)
+        getData.addTarget(self, action: #selector(ViewController.addSol), forControlEvents: UIControlEvents.TouchUpInside)
         
         // Set the button's title
-        getData.setTitle("Get my JSON!", forState: UIControlState.Normal)
+        getData.setTitle("Add Sol", forState: UIControlState.Normal)
         
         // Required to auto layout this button
         getData.translatesAutoresizingMaskIntoConstraints = false
@@ -243,11 +303,13 @@ class ViewController : UIViewController {
         let viewsDictionary : [String : AnyObject] = [
             "title": jsonResult,
             "getData": getData,
+            "minBut": minusButton,
+            //"textIn": textSol,
             "image": imageDisplay]
         
         // Define the vertical constraints
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-50-[getData]-[title]-[image]",
+            "V:|-25-[getData]-[minBut]-[title]-[image]",
             options: [],
             metrics: nil,
             views: viewsDictionary)
@@ -257,7 +319,7 @@ class ViewController : UIViewController {
         
         // Activate all defined constraints
         NSLayoutConstraint.activateConstraints(allConstraints)
-        
+        getMyJSON()
     }
     
 }
