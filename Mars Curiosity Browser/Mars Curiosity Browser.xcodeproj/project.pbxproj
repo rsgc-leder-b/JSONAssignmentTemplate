@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C62340FF1CEF9E5C004EFC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62340FE1CEF9E5C004EFC97 /* AppDelegate.swift */; };
+		C62341011CEF9E5C004EFC97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62341001CEF9E5C004EFC97 /* ViewController.swift */; };
+		C62341041CEF9E5C004EFC97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62341021CEF9E5C004EFC97 /* Main.storyboard */; };
+		C62341061CEF9E5C004EFC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62341051CEF9E5C004EFC97 /* Assets.xcassets */; };
+		C62341091CEF9E5C004EFC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62341071CEF9E5C004EFC97 /* LaunchScreen.storyboard */; };
+		C62341141CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62341131CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift */; };
+		C623411F1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623411E1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C62341101CEF9E5C004EFC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C62340F31CEF9E5A004EFC97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62340FA1CEF9E5B004EFC97;
+			remoteInfo = "Mars Curiosity Browser";
+		};
+		C623411B1CEF9E5C004EFC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C62340F31CEF9E5A004EFC97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62340FA1CEF9E5B004EFC97;
+			remoteInfo = "Mars Curiosity Browser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C62340FB1CEF9E5B004EFC97 /* Mars Curiosity Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Curiosity Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62340FE1CEF9E5C004EFC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C62341001CEF9E5C004EFC97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C62341031CEF9E5C004EFC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C62341051CEF9E5C004EFC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C62341081CEF9E5C004EFC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C623410A1CEF9E5C004EFC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C623410F1CEF9E5C004EFC97 /* Mars Curiosity BrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars Curiosity BrowserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62341131CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_Curiosity_BrowserTests.swift; sourceTree = "<group>"; };
+		C62341151CEF9E5C004EFC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C623411A1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars Curiosity BrowserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C623411E1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_Curiosity_BrowserUITests.swift; sourceTree = "<group>"; };
+		C62341201CEF9E5C004EFC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C62340F81CEF9E5B004EFC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C623410C1CEF9E5C004EFC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62341171CEF9E5C004EFC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C62340F21CEF9E5A004EFC97 = {
+			isa = PBXGroup;
+			children = (
+				C62340FD1CEF9E5C004EFC97 /* Mars Curiosity Browser */,
+				C62341121CEF9E5C004EFC97 /* Mars Curiosity BrowserTests */,
+				C623411D1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests */,
+				C62340FC1CEF9E5B004EFC97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C62340FC1CEF9E5B004EFC97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C62340FB1CEF9E5B004EFC97 /* Mars Curiosity Browser.app */,
+				C623410F1CEF9E5C004EFC97 /* Mars Curiosity BrowserTests.xctest */,
+				C623411A1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C62340FD1CEF9E5C004EFC97 /* Mars Curiosity Browser */ = {
+			isa = PBXGroup;
+			children = (
+				C62340FE1CEF9E5C004EFC97 /* AppDelegate.swift */,
+				C62341001CEF9E5C004EFC97 /* ViewController.swift */,
+				C62341021CEF9E5C004EFC97 /* Main.storyboard */,
+				C62341051CEF9E5C004EFC97 /* Assets.xcassets */,
+				C62341071CEF9E5C004EFC97 /* LaunchScreen.storyboard */,
+				C623410A1CEF9E5C004EFC97 /* Info.plist */,
+			);
+			path = "Mars Curiosity Browser";
+			sourceTree = "<group>";
+		};
+		C62341121CEF9E5C004EFC97 /* Mars Curiosity BrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				C62341131CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift */,
+				C62341151CEF9E5C004EFC97 /* Info.plist */,
+			);
+			path = "Mars Curiosity BrowserTests";
+			sourceTree = "<group>";
+		};
+		C623411D1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C623411E1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift */,
+				C62341201CEF9E5C004EFC97 /* Info.plist */,
+			);
+			path = "Mars Curiosity BrowserUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C62340FA1CEF9E5B004EFC97 /* Mars Curiosity Browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62341231CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity Browser" */;
+			buildPhases = (
+				C62340F71CEF9E5B004EFC97 /* Sources */,
+				C62340F81CEF9E5B004EFC97 /* Frameworks */,
+				C62340F91CEF9E5B004EFC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mars Curiosity Browser";
+			productName = "Mars Curiosity Browser";
+			productReference = C62340FB1CEF9E5B004EFC97 /* Mars Curiosity Browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C623410E1CEF9E5C004EFC97 /* Mars Curiosity BrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62341261CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserTests" */;
+			buildPhases = (
+				C623410B1CEF9E5C004EFC97 /* Sources */,
+				C623410C1CEF9E5C004EFC97 /* Frameworks */,
+				C623410D1CEF9E5C004EFC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C62341111CEF9E5C004EFC97 /* PBXTargetDependency */,
+			);
+			name = "Mars Curiosity BrowserTests";
+			productName = "Mars Curiosity BrowserTests";
+			productReference = C623410F1CEF9E5C004EFC97 /* Mars Curiosity BrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C62341191CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62341291CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserUITests" */;
+			buildPhases = (
+				C62341161CEF9E5C004EFC97 /* Sources */,
+				C62341171CEF9E5C004EFC97 /* Frameworks */,
+				C62341181CEF9E5C004EFC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C623411C1CEF9E5C004EFC97 /* PBXTargetDependency */,
+			);
+			name = "Mars Curiosity BrowserUITests";
+			productName = "Mars Curiosity BrowserUITests";
+			productReference = C623411A1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C62340F31CEF9E5A004EFC97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Brendan Leder";
+				TargetAttributes = {
+					C62340FA1CEF9E5B004EFC97 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M86RNKSRL3;
+					};
+					C623410E1CEF9E5C004EFC97 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M86RNKSRL3;
+						TestTargetID = C62340FA1CEF9E5B004EFC97;
+					};
+					C62341191CEF9E5C004EFC97 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = M86RNKSRL3;
+						TestTargetID = C62340FA1CEF9E5B004EFC97;
+					};
+				};
+			};
+			buildConfigurationList = C62340F61CEF9E5A004EFC97 /* Build configuration list for PBXProject "Mars Curiosity Browser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C62340F21CEF9E5A004EFC97;
+			productRefGroup = C62340FC1CEF9E5B004EFC97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C62340FA1CEF9E5B004EFC97 /* Mars Curiosity Browser */,
+				C623410E1CEF9E5C004EFC97 /* Mars Curiosity BrowserTests */,
+				C62341191CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C62340F91CEF9E5B004EFC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62341091CEF9E5C004EFC97 /* LaunchScreen.storyboard in Resources */,
+				C62341061CEF9E5C004EFC97 /* Assets.xcassets in Resources */,
+				C62341041CEF9E5C004EFC97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C623410D1CEF9E5C004EFC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62341181CEF9E5C004EFC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C62340F71CEF9E5B004EFC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62341011CEF9E5C004EFC97 /* ViewController.swift in Sources */,
+				C62340FF1CEF9E5C004EFC97 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C623410B1CEF9E5C004EFC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62341141CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62341161CEF9E5C004EFC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C623411F1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C62341111CEF9E5C004EFC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C62340FA1CEF9E5B004EFC97 /* Mars Curiosity Browser */;
+			targetProxy = C62341101CEF9E5C004EFC97 /* PBXContainerItemProxy */;
+		};
+		C623411C1CEF9E5C004EFC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C62340FA1CEF9E5B004EFC97 /* Mars Curiosity Browser */;
+			targetProxy = C623411B1CEF9E5C004EFC97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C62341021CEF9E5C004EFC97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62341031CEF9E5C004EFC97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C62341071CEF9E5C004EFC97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62341081CEF9E5C004EFC97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C62341211CEF9E5C004EFC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C62341221CEF9E5C004EFC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C62341241CEF9E5C004EFC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mars Curiosity Browser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-Browser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C62341251CEF9E5C004EFC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mars Curiosity Browser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-Browser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C62341271CEF9E5C004EFC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mars Curiosity BrowserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-BrowserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mars Curiosity Browser.app/Mars Curiosity Browser";
+			};
+			name = Debug;
+		};
+		C62341281CEF9E5C004EFC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mars Curiosity BrowserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-BrowserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mars Curiosity Browser.app/Mars Curiosity Browser";
+			};
+			name = Release;
+		};
+		C623412A1CEF9E5C004EFC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Mars Curiosity BrowserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-BrowserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Mars Curiosity Browser";
+			};
+			name = Debug;
+		};
+		C623412B1CEF9E5C004EFC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Mars Curiosity BrowserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leder-Games.Mars-Curiosity-BrowserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Mars Curiosity Browser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C62340F61CEF9E5A004EFC97 /* Build configuration list for PBXProject "Mars Curiosity Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62341211CEF9E5C004EFC97 /* Debug */,
+				C62341221CEF9E5C004EFC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C62341231CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62341241CEF9E5C004EFC97 /* Debug */,
+				C62341251CEF9E5C004EFC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C62341261CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62341271CEF9E5C004EFC97 /* Debug */,
+				C62341281CEF9E5C004EFC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C62341291CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C623412A1CEF9E5C004EFC97 /* Debug */,
+				C623412B1CEF9E5C004EFC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C62340F31CEF9E5A004EFC97 /* Project object */;
+}
