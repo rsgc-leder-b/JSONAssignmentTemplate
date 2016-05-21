@@ -210,10 +210,12 @@ class ViewController: UIViewController {
     
     func textConvert() {
         if self.textSol.text?.isEmpty == false {
-            let solVal : Int = Int(self.textSol.text!)! + 36
-            if solVal > 36 && solVal < 1342 {
-                sol = solVal
-                getMyJSON()
+            if let asNum = Int(self.textSol.text!) {
+                let solVal : Int = asNum + 36
+                if solVal > 36 && solVal < 1342 {
+                    sol = solVal
+                    getMyJSON()
+                }
             }
         }
     }
