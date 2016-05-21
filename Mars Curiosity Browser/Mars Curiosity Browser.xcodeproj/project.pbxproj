@@ -487,6 +487,7 @@
 				C62341251CEF9E5C004EFC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62341261CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				C62341281CEF9E5C004EFC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62341291CEF9E5C004EFC97 /* Build configuration list for PBXNativeTarget "Mars Curiosity BrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				C623412B1CEF9E5C004EFC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

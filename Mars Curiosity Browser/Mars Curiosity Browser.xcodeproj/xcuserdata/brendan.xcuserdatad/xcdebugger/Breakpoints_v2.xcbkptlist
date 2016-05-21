@@ -26,11 +26,11 @@
                   moduleName = "Mars Curiosity Browser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/brendan/Documents/JSONAssignmentTemplate/Mars%20Curiosity%20Browser/Mars%20Curiosity%20Browser/ViewController.swift"
-                  timestampString = "485470463.326749"
+                  timestampString = "485535877.736008"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
                   offsetFromSymbolStart = "58">
                </Location>
                <Location
@@ -41,14 +41,30 @@
                   moduleName = "Mars Curiosity Browser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/brendan/Documents/JSONAssignmentTemplate/Mars%20Curiosity%20Browser/Mars%20Curiosity%20Browser/ViewController.swift"
-                  timestampString = "485470463.327146"
+                  timestampString = "485535877.736211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mars Curiosity Browser/ViewController.swift"
+            timestampString = "485535875.131079"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "parseMyJSON(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

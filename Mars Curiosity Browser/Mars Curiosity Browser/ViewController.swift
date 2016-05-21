@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     // Views that need to be accessible to all methods
     var sol = 37 // to 1341
     var isUpdate : Bool = true
@@ -62,7 +61,7 @@ class ViewController: UIViewController {
                         urlValue = String(station["img_src"])
                         let range = urlValue.startIndex.advancedBy(9)..<urlValue.endIndex.advancedBy(-1)
                         let substringURL = urlValue[range]
-                        //      print(substringURL)
+                        print(substringURL)
                         if let url = NSURL(string: substringURL) {
                             if let data = NSData(contentsOfURL: url) {
                                 myImage = UIImage(data: data)
@@ -79,6 +78,8 @@ class ViewController: UIViewController {
                             }
                         }
                     }
+                    
+
                 } else {
                     print("Error")
                 }
@@ -261,11 +262,11 @@ class ViewController: UIViewController {
         /*
          * Add a button
          */
-        imageDisplay.frame = CGRect(x: 10, y: 150, width: 100, height: 100)
-        imageDisplay.contentMode = .ScaleAspectFit
-        imageDisplay.translatesAutoresizingMaskIntoConstraints = false
+       // imageDisplay.frame = CGRect(x: 10, y: 150, width: 100, height: 100)
+      //  imageDisplay.contentMode = .ScaleAspectFit
+       // imageDisplay.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(imageDisplay)
+        //view.addSubview(imageDisplay)
         
         
         minusButton.addTarget(self, action: #selector(ViewController.subSol), forControlEvents: UIControlEvents.TouchUpInside)
@@ -302,7 +303,7 @@ class ViewController: UIViewController {
          */
         
         // This is required to lay out the interface elements
-        view.translatesAutoresizingMaskIntoConstraints = false
+        /*view.translatesAutoresizingMaskIntoConstraints = false
         
         // Create an empty list of constraints
         var allConstraints = [NSLayoutConstraint]()
@@ -327,7 +328,7 @@ class ViewController: UIViewController {
         
         // Activate all defined constraints
         NSLayoutConstraint.activateConstraints(allConstraints)
- 
+ */
         getMyJSON()
     }
     
