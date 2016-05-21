@@ -23,11 +23,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npE-2N-ai1">
                                 <rect key="frame" x="100" y="69" width="219" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add Sol"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-qi-JgJ">
                                 <rect key="frame" x="100" y="107" width="219" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Sub Sol"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9J-W5-xCV">
                                 <rect key="frame" x="100" y="145" width="219" height="30"/>
@@ -40,11 +40,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rY-nH-zAp">
+                                <rect key="frame" x="327" y="145" width="46" height="30"/>
+                                <state key="normal" title="Go"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="getData" destination="npE-2N-ai1" id="gop-Wq-w7h"/>
+                        <outlet property="goButton" destination="8rY-nH-zAp" id="0gv-9S-FyM"/>
                         <outlet property="imageDisplay" destination="NyG-Xm-7Nv" id="mY4-0m-Rym"/>
                         <outlet property="jsonResult" destination="mjn-u7-bmi" id="q3b-jK-7Zy"/>
                         <outlet property="minusButton" destination="vP5-qi-JgJ" id="AwU-Ab-5Vf"/>
@@ -90,7 +95,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="vcS-fI-99q"/>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="AbA-tF-TRg" id="vcS-fI-99q">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This app will allow you to see through the eyes of Curiosity by browsing through NASA's  database of the rover's photos." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq5-vG-4WM">

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     // Views that need to be accessible to all methods
     var sol = 37 // to 1341
     var isUpdate : Bool = true
+    @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var imageDisplay: UIImageView!
     @IBOutlet weak var getData: UIButton!
     @IBOutlet weak var jsonResult: UILabel!
@@ -104,6 +105,7 @@ class ViewController: UIViewController {
                 self.imageDisplay.image = myImage
                 self.jsonResult.text = "Current Sol: \(self.sol-36)"
                 self.isUpdate = true
+                self.textSol.text = ""
             }
             
         } catch let error as NSError {
@@ -278,14 +280,14 @@ class ViewController: UIViewController {
         
         textSol.borderStyle = UITextBorderStyle.RoundedRect
         textSol.font = UIFont.systemFontOfSize(15)
-        textSol.placeholder = "                "
+        textSol.placeholder = "enter sol value from 1-1305"
         textSol.backgroundColor = UIColor.whiteColor()
         textSol.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         //textSol.translatesAutoresizingMaskIntoConstraints = false
-        textSol.addTarget(self, action: #selector(ViewController.textConvert), forControlEvents: .EditingChanged)
-        //view.addSubview(textSol)
+                //view.addSubview(textSol)
         
-        
+        goButton.addTarget(self, action: #selector(ViewController.textConvert), forControlEvents: .TouchUpInside)
+
         
         
         // Make the button, when touched, run the calculate method
