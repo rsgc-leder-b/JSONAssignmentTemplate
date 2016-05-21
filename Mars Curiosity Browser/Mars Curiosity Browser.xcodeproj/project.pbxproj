@@ -14,6 +14,7 @@
 		C62341091CEF9E5C004EFC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62341071CEF9E5C004EFC97 /* LaunchScreen.storyboard */; };
 		C62341141CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62341131CEF9E5C004EFC97 /* Mars_Curiosity_BrowserTests.swift */; };
 		C623411F1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623411E1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift */; };
+		C6F3BD241CF0BAF4002085E8 /* Curiosity_Big_Sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6F3BD231CF0BAF4002085E8 /* Curiosity_Big_Sky.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C623411A1CEF9E5C004EFC97 /* Mars Curiosity BrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars Curiosity BrowserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C623411E1CEF9E5C004EFC97 /* Mars_Curiosity_BrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_Curiosity_BrowserUITests.swift; sourceTree = "<group>"; };
 		C62341201CEF9E5C004EFC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F3BD231CF0BAF4002085E8 /* Curiosity_Big_Sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Curiosity_Big_Sky.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C62341051CEF9E5C004EFC97 /* Assets.xcassets */,
 				C62341071CEF9E5C004EFC97 /* LaunchScreen.storyboard */,
 				C623410A1CEF9E5C004EFC97 /* Info.plist */,
+				C6F3BD231CF0BAF4002085E8 /* Curiosity_Big_Sky.jpg */,
 			);
 			path = "Mars Curiosity Browser";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				C62341091CEF9E5C004EFC97 /* LaunchScreen.storyboard in Resources */,
 				C62341061CEF9E5C004EFC97 /* Assets.xcassets in Resources */,
+				C6F3BD241CF0BAF4002085E8 /* Curiosity_Big_Sky.jpg in Resources */,
 				C62341041CEF9E5C004EFC97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
